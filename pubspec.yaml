@@ -1,0 +1,50 @@
+name: food
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  animated_splash_screen: ^1.1.0
+  hexcolor: ^2.0.5
+  font_awesome_flutter: ^9.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+  flutter_launcher_icons: "^0.9.2"
+  flutter_app_name: ^0.1.0
+
+
+flutter_app_name:
+  name: "Knight Shop"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logoApp.png"
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Mplush
+      fonts:
+        - asset: assets/fonts/MPLUSRounded1c-Medium.ttf
+
+
