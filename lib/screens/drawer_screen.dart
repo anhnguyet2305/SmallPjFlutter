@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
 import 'package:food/components/bottom_navaigation.dart';
 import 'package:food/screens/body_home.dart';
 import 'package:food/data/drawer_items.dart';
@@ -128,7 +127,7 @@ class _ContainerDrawerScreenState extends State<ContainerDrawerScreen> {
         return ContentHome(openDrawer: openDrawer);
 
       case DrawerItems.orders:
-        return OrdersScreen(openDrawer: openDrawer);
+        return Orders(openDrawer: openDrawer);
 
       case DrawerItems.offer_and_promo:
         return OfferAndPromo(openDrawer: openDrawer);

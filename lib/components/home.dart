@@ -123,7 +123,7 @@ class _HomeState extends State<Home> {
         return ContentHome(openDrawer: openDrawer);
 
       case DrawerItems.orders:
-        return OrdersScreen(openDrawer: openDrawer);
+        return Orders(openDrawer: openDrawer);
 
       case DrawerItems.offer_and_promo:
         return OfferAndPromo(openDrawer: openDrawer);

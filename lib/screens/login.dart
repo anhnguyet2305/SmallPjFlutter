@@ -5,6 +5,8 @@ import 'package:food/components/tab_login2.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
+
   @override
   _LoginState createState() => _LoginState();
 }
@@ -30,12 +32,15 @@ class _LoginState extends State<Login> {
               child: DefaultTabController(
                 length: 2,
                 child: Scaffold(
-                  backgroundColor: Colors.white,
                   appBar: AppBar(
                     bottomOpacity: 2.0,
                     shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30))),
-                    backgroundColor: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(50.0),
+                        bottomRight: Radius.circular(50.0),
+                      ),
+                    ),
+                    backgroundColor: HexColor('#FFFFFF'),
                     title: TabBar(
                       indicatorColor: HexColor('#FA4A0C'),
                       indicatorWeight: 2.5,

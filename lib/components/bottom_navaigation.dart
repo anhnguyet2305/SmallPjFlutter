@@ -8,7 +8,7 @@ import 'package:food/screens/new_home.dart';
 import 'package:food/screens/profile.dart';
 
 class BottomNavigation extends StatefulWidget {
-  final Function openDrawer;
+  final VoidCallback openDrawer;
 
   const BottomNavigation({Key? key, required this.openDrawer})
       : super(key: key);
@@ -23,7 +23,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: double.infinity,
       child: Column(
@@ -36,11 +36,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 });
               },
               children: [
-                ContentHome(
-                  openDrawer: () {
-                    widget.openDrawer();
-                  },
-                ),
+                Home(),
                 Favorite(),
                 History(),
                 ProfileScreen(openDrawer: () {})

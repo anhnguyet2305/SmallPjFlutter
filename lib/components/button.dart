@@ -19,9 +19,6 @@ class ExpandedButton extends StatelessWidget {
           },
           style: TextButton.styleFrom(
             backgroundColor: HexColor('#FA4A0C'),
-            // padding: const EdgeInsets.symmetric(
-            //     vertical: 14.0, horizontal: 122.0),
-
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),

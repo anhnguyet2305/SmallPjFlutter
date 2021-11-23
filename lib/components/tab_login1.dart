@@ -4,8 +4,6 @@ import 'package:food/components/box_button.dart';
 import 'package:food/components/tab_login2.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import 'home.dart';
-
 class TabLogin1 extends StatefulWidget {
   @override
   _TabLogin1State createState() => _TabLogin1State();
@@ -102,8 +100,8 @@ class _TabLogin1State extends State<TabLogin1> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return MaterialApp(
-              home: TabLogin2(),
+            return const Scaffold(
+              body: TabLogin2(),
             );
           },
         ),
@@ -125,10 +123,8 @@ class _TabLogin1State extends State<TabLogin1> {
         _passInvalid = false;
       }
       if (!_userInvalid && !_passInvalid) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Home()),
-        );
+        Navigator.of(context)
+            .pushNamedAndRemoveUntil('/home', (Route<dynamic> route) => false);
       }
     });
   }

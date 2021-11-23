@@ -1,9 +1,9 @@
 import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food/components/box_button.dart';
 import 'package:food/components/card_page.dart';
+import 'package:food/widget/drawer_menu_widget.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 var styleTextCard = TextStyle(fontSize: 16.0, color: Colors.grey);
@@ -16,10 +16,16 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#F2F2F2'),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         title: Text('My profile'),
+        leading: Container(
+          margin: EdgeInsets.only(left: 18.0),
+          child: DrawerMenuWidget(onClicked: openDrawer),
+        ),
       ),
+      backgroundColor: HexColor('#F2F2F2'),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
@@ -36,8 +42,13 @@ class ProfileScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       ListTile(
-                        leading: Image.asset(
-                          ('assets/images/img_5.png'),
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(50.0),
+                          child: Image.asset(
+                            ('assets/images/img_5.png'),
+                            height: 150.0,
+                            width: 100.0,
+                          ),
                         ),
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
